@@ -51,7 +51,7 @@ var script = {
   name: 'Vue2TinymceEditor',
   props: {
     id: {
-      default: 'vue2-tinymce-editor-' + new Date().getTime(),
+      default: 'vue2-tinymce-editor-' + new Date().getTime() + Math.floor(Math.random()*(999999 - 111111 + 1) + 111111),
       type: String
     },
     value: {
@@ -75,7 +75,7 @@ var script = {
 
   data() {
     return {
-      inputId: "editor-" + new Date().getTime(),
+      inputId: "editor-" + new Date().getTime() + Math.floor(Math.random()*(999999 - 111111 + 1) + 111111),
       content: '',
       editor: null,
       checkerTimeout: null,
